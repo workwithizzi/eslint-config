@@ -7,12 +7,10 @@ module.exports = {
 		node: true,
 	},
 	parser: "babel-eslint",
-	plugins: ["html", "react", "json", "jsx-a11y"],
+	plugins: ["html", "json"],
 	parserOptions: {
 		ecmaVersion: 2018,
-		// Can I remove these now?
 		ecmaFeatures: {
-			jsx: true,
 			impliedStrict: true,
 			classes: true,
 		},
@@ -24,15 +22,12 @@ module.exports = {
 		// indent one tab in relation to <script>: https://tinyurl.com/y3wnbjdx
 		"html/indent": "+tab",
 		// "html/report-bad-indent": 1, // Print warning for bad indentation in html
-		"react": {
-			"version": "detect"
-		}
 	},
 	rules: {
-		"no-unused-vars": 0, //2
-		// 'no-undef': 0, //2
-		// 'no-console': 1,
-		"no-var": 2,
+		"no-unused-vars": 0,
+		'no-undef': 1, //2
+		'no-console': 0, //1
+		"no-var": 1,
 		"prefer-const": [
 			2,
 			{
@@ -43,17 +38,17 @@ module.exports = {
 			2,
 			{
 				max: 3, // allow up to three lines
-				maxBOF: 1,
+				maxBOF: 1, // allow 1 empty line at the beginning
 			},
 		],
-		"max-len": [
+		"eol-last": [2, "always"], // require empty line at end of file
+		"max-len": [ // maximum line length
 			0,
 			{
 				"ignoreComments": true,
 				"ignoreUrls": true,
 			}
 		],
-		// allow mixed when used for alignment
 		"comma-dangle": [
 			2,
 			{
@@ -72,25 +67,12 @@ module.exports = {
 				allowTemplateLiterals: true,
 			},
 		],
-		indent: [2, "tab"],
+		indent: [2, "tab"], //2, "spaces"
 		"no-mixed-spaces-and-tabs": [1,"smart-tabs"],
 		"space-before-function-paren": [2, "never"],
-		"eol-last": [2, "always"],
 		"array-element-newline": [2, "consistent"],
 		"linebreak-style": [2, "unix"],
-		semi: [2, "never"],
+		semi: [2, "always"],
 		"no-shadow-restricted-names": 2,
-
-		// * React Plugin
-		"react/jsx-uses-vars": 1,
-		"react/prefer-stateless-function": 1,
-		"react/jsx-filename-extension": [
-			1,
-			{
-				extensions: [ ".jsx" ], //.js
-			},
-		],
-		// * JSX A11Y Plugin
-		'jsx-a11y/accessible-emoji': 1,
 	},
 };
