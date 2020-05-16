@@ -1,7 +1,7 @@
 {
 	"name": "@workwithizzi/eslint-config-react",
 	"repository": "https://github.com/workwithizzi/eslint-react",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"main": "index.js",
 	"license": "MIT",
 	"scripts": {
