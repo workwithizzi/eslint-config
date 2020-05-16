@@ -7,4 +7,10 @@
   `yarn add -D @workwithizzi/eslint-config`
 
 - Create a `.eslintrc.js` or `.eslintrc` file in your project root and extend this package
-  `module.exports = { extends: "@workwithizzi/eslint-config", // Overide your eslint rules below. // rules: {} }`
+  ```js
+    module.exports = {
+      extends: "@workwithizzi/eslint-config",
+      // Overide your eslint rules below.
+      // rules: {},
+    }
+  ```
