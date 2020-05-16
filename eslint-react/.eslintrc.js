@@ -5,6 +5,7 @@ module.exports = {
 		ecmaVersion: 2018,
 		ecmaFeatures: {
 			jsx: true,
+			module: true,
 		},
 	},
 	settings: {
